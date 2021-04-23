@@ -66,7 +66,7 @@ class Employee extends ResourceController
     // delete
     public function delete($id = null){
         $model = new EmployeeModel();
-        $data = $model->where('id', $id)->delete($id);
+        $data = $model->where('id', $id);
         if($data){
             $model->delete($id);
             $response = [
